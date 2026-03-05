@@ -62,8 +62,8 @@ export default function NotesClientByTag({ tag }: NotesClientByTagProps) {
         {data && data.totalPages > 1 && (
           <Pagination
             totalPages={data.totalPages}
-            setPage={setPage}
-            page={page}
+            currentPage={page}
+            onPageChange={setPage}
           />
         )}
         <button onClick={openModal} className={css.button}>
